@@ -1,17 +1,17 @@
 {
-    "name": "dmitrybubyakin/nova-medialibrary-field",
+    "name": "aqjw/medialibrary-field",
     "description": "Laravel Nova field for managing the Spatie media library.",
     "keywords": [
         "laravel",
         "nova",
         "medialibrary"
     ],
-    "homepage": "https://github.com/dmitrybubyakin/nova-medialibrary-field",
+    "homepage": "https://github.com/aqjw/medialibrary-field",
     "license": "MIT",
     "authors": [
         {
-            "name": "Dmitry Bubyakin",
-            "email": "dimabubyakin97@gmail.com"
+            "name": "Anton Shever",
+            "email": "anton.shever96@gmail.com"
         }
     ],
     "repositories": [
@@ -27,12 +27,12 @@
     "require-dev": {
         "laravel/nova": "^4.0",
         "orchestra/testbench": "^5.0|^6.0|^7.0",
-        "nunomaduro/collision": "^6.0",
+        "nunomaduro/collision": "^4.0|^5.0|^6.0",
         "phpunit/phpunit": "^8.5|^9.0"
     },
     "autoload": {
         "psr-4": {
-            "DmitryBubyakin\\NovaMedialibraryField\\": "src/"
+            "Aqjw\\MedialibraryField\\": "src/"
         },
         "files": [
             "src/helpers.php"
@@ -40,13 +40,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "DmitryBubyakin\\NovaMedialibraryField\\Tests\\": "tests/"
+            "Aqjw\\MedialibraryField\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "DmitryBubyakin\\NovaMedialibraryField\\FieldServiceProvider"
+                "Aqjw\\MedialibraryField\\FieldServiceProvider"
             ]
         }
     },

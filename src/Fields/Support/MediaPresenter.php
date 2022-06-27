@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Fields\Support;
+namespace Aqjw\MedialibraryField\Fields\Support;
 
-use function DmitryBubyakin\NovaMedialibraryField\call_or_default;
-use DmitryBubyakin\NovaMedialibraryField\Fields\Medialibrary;
-use DmitryBubyakin\NovaMedialibraryField\TransientModel;
+use function Aqjw\MedialibraryField\call_or_default;
+use Aqjw\MedialibraryField\Fields\Medialibrary;
+use Aqjw\MedialibraryField\TransientModel;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Str;

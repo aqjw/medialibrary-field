@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Resources;
+namespace Aqjw\MedialibraryField\Resources;
 
-use DmitryBubyakin\NovaMedialibraryField\MedialibraryFieldResolver;
+use Aqjw\MedialibraryField\MedialibraryFieldResolver;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Resource;
@@ -21,7 +21,7 @@ class Media extends Resource
 
     public static function uriKey(): string
     {
-        return 'dmitrybubyakin-nova-medialibrary-media';
+        return 'aqjw-medialibrary-media';
     }
 
     public function fields(NovaRequest $request): array

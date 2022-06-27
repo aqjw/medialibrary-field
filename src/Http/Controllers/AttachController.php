@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Http\Controllers;
+namespace Aqjw\MedialibraryField\Http\Controllers;
 
-use DmitryBubyakin\NovaMedialibraryField\Http\Requests\MedialibraryRequest;
-use DmitryBubyakin\NovaMedialibraryField\TransientModel;
+use Aqjw\MedialibraryField\Http\Requests\MedialibraryRequest;
+use Aqjw\MedialibraryField\TransientModel;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\UploadedFile;
 use Spatie\MediaLibrary\HasMedia;

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Fixtures;
+namespace Aqjw\MedialibraryField\Tests\Fixtures;
 
 use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;

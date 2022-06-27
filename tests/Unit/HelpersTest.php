@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Unit;
+namespace Aqjw\MedialibraryField\Tests\Unit;
 
-use function DmitryBubyakin\NovaMedialibraryField\call_or_default;
-use function DmitryBubyakin\NovaMedialibraryField\callable_or_default;
-use function DmitryBubyakin\NovaMedialibraryField\validate_args;
+use function Aqjw\MedialibraryField\call_or_default;
+use function Aqjw\MedialibraryField\callable_or_default;
+use function Aqjw\MedialibraryField\validate_args;
 use PHPUnit\Framework\TestCase;
 
 class HelpersTest extends TestCase
@@ -54,10 +54,10 @@ class HelpersTest extends TestCase
         return [
             ['string', 'string, stdClass', 1, [new \stdClass]],
             ['string', 'string, integer', 1, [1]],
-            ['object', '\DmitryBubyakin\NovaMedialibraryField\Tests\Unit\ValidateArgsClass, integer', 1, [1]],
-            ['object', '\DmitryBubyakin\NovaMedialibraryField\Tests\Unit\ValidateArgsClass, array', 1, [[]]],
-            ['mixed', 'string|callable|\DmitryBubyakin\NovaMedialibraryField\Tests\Unit\ValidateArgsClass, double', 1, [1.0]],
-            ['mixed', 'string|callable|\DmitryBubyakin\NovaMedialibraryField\Tests\Unit\ValidateArgsClass, boolean', 1, [true]],
+            ['object', '\Aqjw\MedialibraryField\Tests\Unit\ValidateArgsClass, integer', 1, [1]],
+            ['object', '\Aqjw\MedialibraryField\Tests\Unit\ValidateArgsClass, array', 1, [[]]],
+            ['mixed', 'string|callable|\Aqjw\MedialibraryField\Tests\Unit\ValidateArgsClass, double', 1, [1.0]],
+            ['mixed', 'string|callable|\Aqjw\MedialibraryField\Tests\Unit\ValidateArgsClass, boolean', 1, [true]],
             ['multiple', 'string, integer', 1, [1, 2, 3, 1]],
             ['multiple', '\stdClass, integer', 2, ['string', 2, 3, 1]],
             ['multiple', 'float|int|bool, string', 3, ['string', new \stdClass, 'string', 1]],
@@ -112,7 +112,7 @@ class ValidateArgsClass
     }
 
     /**
-     * @param \DmitryBubyakin\NovaMedialibraryField\Tests\Unit\ValidateArgsClass $value
+     * @param \Aqjw\MedialibraryField\Tests\Unit\ValidateArgsClass $value
      */
     public function object($value): void
     {
@@ -120,7 +120,7 @@ class ValidateArgsClass
     }
 
     /**
-     * @param string|callable|\DmitryBubyakin\NovaMedialibraryField\Tests\Unit\ValidateArgsClass $value
+     * @param string|callable|\Aqjw\MedialibraryField\Tests\Unit\ValidateArgsClass $value
      */
     public function mixed($value): void
     {

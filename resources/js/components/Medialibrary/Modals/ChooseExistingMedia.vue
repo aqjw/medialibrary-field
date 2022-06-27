@@ -42,8 +42,8 @@
 <script>
 import PaginationButton from '../PaginationButton'
 import ChooseExistingMediaList from '../ChooseExistingMediaList'
-import IndexSearchInput from '../../../../../vendor/laravel/nova/resources/js/components/Inputs/IndexSearchInput.vue'
-import ModalContent from '../../../../../vendor/laravel/nova/resources/js/components/Modals/ModalContent.vue'
+import IndexSearchInput from 'nova-components/Inputs/IndexSearchInput.vue'
+import ModalContent from 'nova-components/Modals/ModalContent.vue'
 
 export default {
   emits: ['choose', 'close'],
@@ -110,7 +110,7 @@ export default {
 
       return Nova.request()
         .get(
-          `/nova-vendor/dmitrybubyakin/nova-medialibrary-field/${resourceName}/${resourceId}/media/${attribute}/attachable`,
+          `/nova-vendor/aqjw/medialibrary-field/${resourceName}/${resourceId}/media/${attribute}/attachable`,
           { params }
         )
         .then(({ data }) => {

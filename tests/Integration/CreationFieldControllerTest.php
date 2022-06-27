@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Integration;
+namespace Aqjw\MedialibraryField\Tests\Integration;
 
-use DmitryBubyakin\NovaMedialibraryField\Tests\TestCase;
+use Aqjw\MedialibraryField\Tests\TestCase;
 
 class CreationFieldControllerTest extends TestCase
 {
@@ -16,7 +16,7 @@ class CreationFieldControllerTest extends TestCase
             ->assertSuccessful();
 
         foreach ($response->decodeResponseJson()['fields'] as $field) {
-            if ($field['component'] === 'nova-medialibrary-field') {
+            if ($field['component'] === 'medialibrary-field') {
                 $this->assertNotNull($field['value']);
             }
         }

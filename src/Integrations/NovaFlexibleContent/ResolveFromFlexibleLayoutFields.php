@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Integrations\NovaFlexibleContent;
+namespace Aqjw\MedialibraryField\Integrations\NovaFlexibleContent;
 
-use DmitryBubyakin\NovaMedialibraryField\Fields\Medialibrary;
-use DmitryBubyakin\NovaMedialibraryField\TransientModel;
+use Aqjw\MedialibraryField\Fields\Medialibrary;
+use Aqjw\MedialibraryField\TransientModel;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
 use Laravel\Nova\Fields\FieldCollection;

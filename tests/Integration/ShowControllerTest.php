@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Integration;
+namespace Aqjw\MedialibraryField\Tests\Integration;
 
-use DmitryBubyakin\NovaMedialibraryField\Tests\TestCase;
+use Aqjw\MedialibraryField\Tests\TestCase;
 
 class ShowControllerTest extends TestCase
 {
@@ -16,7 +16,7 @@ class ShowControllerTest extends TestCase
         $media = $post->media->first();
 
         $response = $this
-            ->getJson("nova-api/dmitrybubyakin-nova-medialibrary-media/{$media->id}?viaResource=test-posts&viaField=media")
+            ->getJson("nova-api/aqjw-medialibrary-media/{$media->id}?viaResource=test-posts&viaField=media")
             ->assertSuccessful();
 
         $this->assertCount(1, $response->decodeResponseJson()['resource']['fields']);

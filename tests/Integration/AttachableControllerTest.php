@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Integration;
+namespace Aqjw\MedialibraryField\Tests\Integration;
 
-use DmitryBubyakin\NovaMedialibraryField\Tests\TestCase;
+use Aqjw\MedialibraryField\Tests\TestCase;
 
 class AttachableControllerTest extends TestCase
 {
@@ -14,7 +14,7 @@ class AttachableControllerTest extends TestCase
         $post = $this->createPostWithMedia(10);
 
         $this
-            ->getJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media/attachable")
+            ->getJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media/attachable")
             ->assertSuccessful()
             ->assertJsonCount(10, 'data');
     }
@@ -25,12 +25,12 @@ class AttachableControllerTest extends TestCase
         $post = $this->createPostWithMedia(10);
 
         $this
-            ->getJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media/attachable?perPage=5")
+            ->getJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media/attachable?perPage=5")
             ->assertSuccessful()
             ->assertJsonCount(5, 'data');
 
         $this
-            ->getJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media/attachable?perPage=3&page=4")
+            ->getJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media/attachable?perPage=3&page=4")
             ->assertSuccessful()
             ->assertJsonCount(1, 'data');
     }
@@ -44,27 +44,27 @@ class AttachableControllerTest extends TestCase
         $post->media()->take(2)->get()->each->update(['name' => 'xxx']);
 
         $this
-            ->getJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media/attachable?name=xxx")
+            ->getJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media/attachable?name=xxx")
             ->assertSuccessful()
             ->assertJsonCount(2, 'data');
 
         $this
-            ->getJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media/attachable?maxSize=0")
+            ->getJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media/attachable?maxSize=0")
             ->assertSuccessful()
             ->assertJsonCount(10, 'data');
 
         $this
-            ->getJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media/attachable?mimeType=text/*")
+            ->getJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media/attachable?mimeType=text/*")
             ->assertSuccessful()
             ->assertJsonCount(9, 'data');
 
         $this
-            ->getJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media/attachable?mimeType=image/*")
+            ->getJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media/attachable?mimeType=image/*")
             ->assertSuccessful()
             ->assertJsonCount(1, 'data');
 
         $this
-            ->getJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media/attachable?mimeType=image/jpg,image/jpeg,image/png,image/gif")
+            ->getJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media/attachable?mimeType=image/jpg,image/jpeg,image/png,image/gif")
             ->assertSuccessful()
             ->assertJsonCount(1, 'data');
     }

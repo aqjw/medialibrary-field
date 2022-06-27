@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Integration;
+namespace Aqjw\MedialibraryField\Tests\Integration;
 
-use DmitryBubyakin\NovaMedialibraryField\Tests\Fixtures\TestPost;
-use DmitryBubyakin\NovaMedialibraryField\Tests\TestCase;
-use DmitryBubyakin\NovaMedialibraryField\TransientModel;
+use Aqjw\MedialibraryField\Tests\Fixtures\TestPost;
+use Aqjw\MedialibraryField\Tests\TestCase;
+use Aqjw\MedialibraryField\TransientModel;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Str;
 use Illuminate\Testing\Assert as PHPUnit;
@@ -37,7 +37,7 @@ class AttachControllerTest extends TestCase
     {
         $post = $this->createPost();
 
-        $uri = "nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media_testing_validation";
+        $uri = "nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media_testing_validation";
 
         $this
             ->postJson($uri)
@@ -61,7 +61,7 @@ class AttachControllerTest extends TestCase
     {
         $uuid = (string) Str::uuid();
 
-        $uri = 'nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/undefined/media/media_testing_validation';
+        $uri = 'nova-vendor/aqjw/medialibrary-field/test-posts/undefined/media/media_testing_validation';
 
         $this
             ->postJson($uri, ['fieldUuid' => $uuid])
@@ -122,7 +122,7 @@ class AttachControllerTest extends TestCase
         $file = $this->makeUploadedFile($this->getJpgFile());
 
         $this
-            ->postJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media_testing_custom_attribute", ['file' => $file])
+            ->postJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media_testing_custom_attribute", ['file' => $file])
             ->assertCreated();
 
         $this->assertCount(1, $post->media);
@@ -138,7 +138,7 @@ class AttachControllerTest extends TestCase
         TestPost::$withConversions = true;
 
         $this
-            ->postJson('nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/undefined/media/media_testing_custom_attribute', [
+            ->postJson('nova-vendor/aqjw/medialibrary-field/test-posts/undefined/media/media_testing_custom_attribute', [
                 'file' => $file,
                 'fieldUuid' => $uuid,
             ])
@@ -185,7 +185,7 @@ class AttachControllerTest extends TestCase
         $post = $this->createPost();
 
         $this
-            ->postJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/media_testing_custom_attribute", ['media' => 1])
+            ->postJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/media_testing_custom_attribute", ['media' => 1])
             ->assertCreated();
 
         $this->assertCount(1, $post->media);
@@ -199,14 +199,14 @@ class AttachControllerTest extends TestCase
         $this->createPostWithMedia();
 
         $this
-            ->postJson('nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/undefined/media/media_testing_single', [
+            ->postJson('nova-vendor/aqjw/medialibrary-field/test-posts/undefined/media/media_testing_single', [
                 'media' => 1,
                 'fieldUuid' => $uuid,
             ])
             ->assertCreated();
 
         $this
-            ->postJson('nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/undefined/media/media_testing_single', [
+            ->postJson('nova-vendor/aqjw/medialibrary-field/test-posts/undefined/media/media_testing_single', [
                 'media' => 1,
                 'fieldUuid' => $uuid,
             ])

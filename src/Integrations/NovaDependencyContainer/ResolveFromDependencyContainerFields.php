@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Integrations\NovaDependencyContainer;
+namespace Aqjw\MedialibraryField\Integrations\NovaDependencyContainer;
 
-use DmitryBubyakin\NovaMedialibraryField\Fields\Medialibrary;
+use Aqjw\MedialibraryField\Fields\Medialibrary;
 use Laravel\Nova\Fields\FieldCollection;
 
 class ResolveFromDependencyContainerFields

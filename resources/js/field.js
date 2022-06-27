@@ -24,9 +24,9 @@ Nova.booting((app, store) => {
   app.component('icon-cropper-zoom-in', IconCropperZoomIn)
   app.component('icon-cropper-zoom-out', IconCropperZoomOut)
 
-  app.component('index-nova-medialibrary-field', IndexField)
-  app.component('detail-nova-medialibrary-field', DetailField)
-  app.component('form-nova-medialibrary-field', FormField)
+  app.component('index-medialibrary-field', IndexField)
+  app.component('detail-medialibrary-field', DetailField)
+  app.component('form-medialibrary-field', FormField)
 
   app.component('detail-nova-generated-conversions-field', GeneratedConversionsDetailField)
 })

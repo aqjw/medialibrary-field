@@ -61,7 +61,7 @@ export default {
       this.context.setMedia(media)
 
       Nova.request()
-        .post('/nova-vendor/dmitrybubyakin/nova-medialibrary-field/sort', {
+        .post('/nova-vendor/aqjw/medialibrary-field/sort', {
           media: media.map((media) => media.id),
         })
         .then(() => Nova.success(this.__('Media sorted')))

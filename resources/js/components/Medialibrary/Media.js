@@ -39,7 +39,7 @@ export default class Media {
   }
 
   get resourceName() {
-    return 'dmitrybubyakin-nova-medialibrary-media'
+    return 'aqjw-medialibrary-media'
   }
 
   get singularLabel() {
@@ -91,7 +91,7 @@ export default class Media {
   fetch(uri) {
     return this.withLoading(
       Nova.request()
-        .get(`/nova-api/dmitrybubyakin-nova-medialibrary-media/${uri}`, { params: this.__requestParams })
+        .get(`/nova-api/aqjw-medialibrary-media/${uri}`, { params: this.__requestParams })
         .then((response) => response.data)
     )
   }
@@ -188,7 +188,7 @@ export default class Media {
   }
 
   async regenerate() {
-    await Nova.request().post(`/nova-vendor/dmitrybubyakin/nova-medialibrary-field/${this.id}/regenerate`)
+    await Nova.request().post(`/nova-vendor/aqjw/medialibrary-field/${this.id}/regenerate`)
 
     Nova.success(Localization.methods.__('Media was regenerated!', { resource: this.singularLabel.toLowerCase() }))
 
@@ -219,7 +219,7 @@ export default class Media {
     data = { ...data, conversion: this.cropperConversion }
 
     await this.withUpdating(
-      Nova.request().post(`/nova-vendor/dmitrybubyakin/nova-medialibrary-field/${this.id}/crop`, data)
+      Nova.request().post(`/nova-vendor/aqjw/medialibrary-field/${this.id}/crop`, data)
     )
 
     this.closeAllModals()
@@ -229,6 +229,6 @@ export default class Media {
   }
 
   refresh() {
-    Nova.$emit(`nova-medialibrary-field:refresh:${this.__attribute}`)
+    Nova.$emit(`medialibrary-field:refresh:${this.__attribute}`)
   }
 }

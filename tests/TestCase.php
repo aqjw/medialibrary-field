@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests;
+namespace Aqjw\MedialibraryField\Tests;
 
-use DmitryBubyakin\NovaMedialibraryField\FieldServiceProvider;
-use DmitryBubyakin\NovaMedialibraryField\Tests\Fixtures\TestPost;
+use Aqjw\MedialibraryField\FieldServiceProvider;
+use Aqjw\MedialibraryField\Tests\Fixtures\TestPost;
 use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Http\Request;
@@ -63,7 +63,15 @@ abstract class TestCase extends Orchestra
         include_once __DIR__.'/../vendor/laravel/nova/database/migrations/2018_01_01_000000_create_action_events_table.php';
         include_once __DIR__.'/../vendor/laravel/nova/database/migrations/2019_05_10_000000_add_fields_to_action_events_table.php';
 
-        (new \CreateMediaTable())->up();
+        if (class_exists(\CreateMediaTable::class)) {
+            // PHP 7 only
+            (new \CreateMediaTable())->up();
+        } else {
+            // PHP 8+ version of medialibrary uses anonymous class, so we can require and call it
+            $mediaTableMigration = require __DIR__.'/../vendor/spatie/laravel-medialibrary/database/migrations/create_media_table.php.stub';
+            $mediaTableMigration->up();
+        }
+
         (new \CreateActionEventsTable())->up();
         (new \AddFieldsToActionEventsTable())->up();
     }
@@ -80,7 +88,7 @@ abstract class TestCase extends Orchestra
         Route::middlewareGroup('nova:api', ['nova']);
 
         Nova::resources([
-            \DmitryBubyakin\NovaMedialibraryField\Tests\Fixtures\Nova\TestPost::class,
+            \Aqjw\MedialibraryField\Tests\Fixtures\Nova\TestPost::class,
         ]);
 
         Nova::$resources = array_filter(Nova::$resources);

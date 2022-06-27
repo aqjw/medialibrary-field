@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Unit;
+namespace Aqjw\MedialibraryField\Tests\Unit;
 
-use DmitryBubyakin\NovaMedialibraryField\Resources\Media as MediaResource;
-use DmitryBubyakin\NovaMedialibraryField\Tests\TestCase;
+use Aqjw\MedialibraryField\Resources\Media as MediaResource;
+use Aqjw\MedialibraryField\Tests\TestCase;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class MediaTest extends TestCase

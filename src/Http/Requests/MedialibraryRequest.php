@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Http\Requests;
+namespace Aqjw\MedialibraryField\Http\Requests;
 
-use DmitryBubyakin\NovaMedialibraryField\Fields\Medialibrary;
-use DmitryBubyakin\NovaMedialibraryField\MedialibraryFieldResolver;
+use Aqjw\MedialibraryField\Fields\Medialibrary;
+use Aqjw\MedialibraryField\MedialibraryFieldResolver;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class MedialibraryRequest extends NovaRequest

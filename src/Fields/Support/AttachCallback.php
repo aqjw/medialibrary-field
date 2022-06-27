@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Fields\Support;
+namespace Aqjw\MedialibraryField\Fields\Support;
 
-use DmitryBubyakin\NovaMedialibraryField\TransientModel;
+use Aqjw\MedialibraryField\TransientModel;
 use Illuminate\Http\UploadedFile;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;

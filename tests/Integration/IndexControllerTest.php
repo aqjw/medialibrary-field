@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Integration;
+namespace Aqjw\MedialibraryField\Tests\Integration;
 
-use DmitryBubyakin\NovaMedialibraryField\Tests\TestCase;
-use DmitryBubyakin\NovaMedialibraryField\TransientModel;
+use Aqjw\MedialibraryField\Tests\TestCase;
+use Aqjw\MedialibraryField\TransientModel;
 use Illuminate\Support\Str;
 
 class IndexControllerTest extends TestCase
@@ -19,7 +19,7 @@ class IndexControllerTest extends TestCase
         $post = $this->createPostWithMedia($media);
 
         $this
-            ->getJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/{$post->id}/media/{$field}")
+            ->getJson("nova-vendor/aqjw/medialibrary-field/test-posts/{$post->id}/media/{$field}")
             ->assertSuccessful()
             ->assertJsonCount($count);
     }
@@ -54,7 +54,7 @@ class IndexControllerTest extends TestCase
         }
 
         $this
-            ->getJson("nova-vendor/dmitrybubyakin/nova-medialibrary-field/test-posts/undefined/media/media?fieldUuid={$uuid}")
+            ->getJson("nova-vendor/aqjw/medialibrary-field/test-posts/undefined/media/media?fieldUuid={$uuid}")
             ->assertSuccessful()
             ->assertJsonCount(5);
     }

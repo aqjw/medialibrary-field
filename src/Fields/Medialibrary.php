@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Fields;
+namespace Aqjw\MedialibraryField\Fields;
 
-use function DmitryBubyakin\NovaMedialibraryField\callable_or_default;
-use DmitryBubyakin\NovaMedialibraryField\Fields\Support\AttachCallback;
-use DmitryBubyakin\NovaMedialibraryField\Fields\Support\MediaCollectionRules;
-use DmitryBubyakin\NovaMedialibraryField\Fields\Support\MediaFields;
-use DmitryBubyakin\NovaMedialibraryField\Fields\Support\MediaPresenter;
-use DmitryBubyakin\NovaMedialibraryField\Fields\Support\ResolveMediaCallback;
-use DmitryBubyakin\NovaMedialibraryField\TransientModel;
-use function DmitryBubyakin\NovaMedialibraryField\validate_args;
+use function Aqjw\MedialibraryField\callable_or_default;
+use Aqjw\MedialibraryField\Fields\Support\AttachCallback;
+use Aqjw\MedialibraryField\Fields\Support\MediaCollectionRules;
+use Aqjw\MedialibraryField\Fields\Support\MediaFields;
+use Aqjw\MedialibraryField\Fields\Support\MediaPresenter;
+use Aqjw\MedialibraryField\Fields\Support\ResolveMediaCallback;
+use Aqjw\MedialibraryField\TransientModel;
+use function Aqjw\MedialibraryField\validate_args;
 use Illuminate\Contracts\Validation\Rule;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
@@ -24,7 +24,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Medialibrary extends Field
 {
-    public $component = 'nova-medialibrary-field';
+    public $component = 'medialibrary-field';
 
     public $collectionName;
 

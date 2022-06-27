@@ -112,11 +112,11 @@ export default {
   },
 
   created() {
-    Nova.$on(`nova-medialibrary-field:attach:${this.context.field.attribute}`, this.addMediaItems)
+    Nova.$on(`medialibrary-field:attach:${this.context.field.attribute}`, this.addMediaItems)
   },
 
   beforeDestroy() {
-    Nova.$off(`nova-medialibrary-field:attach:${this.context.field.attribute}`, this.addMediaItems)
+    Nova.$off(`medialibrary-field:attach:${this.context.field.attribute}`, this.addMediaItems)
   },
 
   methods: {
@@ -212,7 +212,7 @@ export default {
 
         const uploadingPromise = Nova.request()
           .post(
-            `/nova-vendor/dmitrybubyakin/nova-medialibrary-field/${resourceName}/${resourceId}/media/${attribute}`,
+            `/nova-vendor/aqjw/medialibrary-field/${resourceName}/${resourceId}/media/${attribute}`,
             formData,
             options
           )
@@ -226,7 +226,7 @@ export default {
     },
 
     handleUploadSucceeded(media) {
-      Nova.$emit(`nova-medialibrary-field:refresh:${this.context.field.attribute}`, () => {
+      Nova.$emit(`medialibrary-field:refresh:${this.context.field.attribute}`, () => {
         media.remove()
       })
     },

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField;
+namespace Aqjw\MedialibraryField;
 
 use Illuminate\Support\Collection;
 

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Fixtures\Nova;
+namespace Aqjw\MedialibraryField\Tests\Fixtures\Nova;
 
 use Laravel\Nova\Fields\Field;
 

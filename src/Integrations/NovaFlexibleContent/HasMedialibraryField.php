@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Integrations\NovaFlexibleContent;
+namespace Aqjw\MedialibraryField\Integrations\NovaFlexibleContent;
 
-use DmitryBubyakin\NovaMedialibraryField\Fields\Medialibrary;
+use Aqjw\MedialibraryField\Fields\Medialibrary;
 use Whitecube\NovaFlexibleContent\Layouts\Layout;
 
 /**
@@ -16,7 +16,7 @@ trait HasMedialibraryField
             return;
         }
 
-        /** @var \DmitryBubyakin\NovaMedialibraryField\Fields\Medialibrary $field */
+        /** @var \Aqjw\MedialibraryField\Fields\Medialibrary $field */
         foreach ($this->fields->whereInstanceOf(Medialibrary::class) as $field) {
             $field->fillUsing(function ($request, $model): void {
                 if ($model instanceof Layout) {

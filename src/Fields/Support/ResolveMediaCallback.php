@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Fields\Support;
+namespace Aqjw\MedialibraryField\Fields\Support;
 
 use Illuminate\Support\Collection;
 use Spatie\MediaLibrary\HasMedia;

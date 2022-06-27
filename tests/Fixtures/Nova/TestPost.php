@@ -1,8 +1,8 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Fixtures\Nova;
+namespace Aqjw\MedialibraryField\Tests\Fixtures\Nova;
 
-use DmitryBubyakin\NovaMedialibraryField\Fields\Medialibrary;
+use Aqjw\MedialibraryField\Fields\Medialibrary;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\Text;
@@ -13,7 +13,7 @@ use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class TestPost extends Resource
 {
-    public static $model = 'DmitryBubyakin\NovaMedialibraryField\Tests\Fixtures\TestPost';
+    public static $model = 'Aqjw\MedialibraryField\Tests\Fixtures\TestPost';
 
     public function fields(Request $request)
     {

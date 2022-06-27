@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Fields;
+namespace Aqjw\MedialibraryField\Fields;
 
 use Laravel\Nova\Fields\Field;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;

@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField;
+namespace Aqjw\MedialibraryField;
 
 use ReflectionMethod;
 use TypeError;

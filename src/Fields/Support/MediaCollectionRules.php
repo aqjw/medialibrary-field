@@ -1,9 +1,9 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Fields\Support;
+namespace Aqjw\MedialibraryField\Fields\Support;
 
-use DmitryBubyakin\NovaMedialibraryField\Fields\Medialibrary;
-use DmitryBubyakin\NovaMedialibraryField\TransientModel;
+use Aqjw\MedialibraryField\Fields\Medialibrary;
+use Aqjw\MedialibraryField\TransientModel;
 use Illuminate\Contracts\Validation\ImplicitRule;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;

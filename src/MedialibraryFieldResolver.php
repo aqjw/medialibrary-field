@@ -1,10 +1,10 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField;
+namespace Aqjw\MedialibraryField;
 
-use DmitryBubyakin\NovaMedialibraryField\Fields\Medialibrary;
-use DmitryBubyakin\NovaMedialibraryField\Integrations\NovaDependencyContainer\ResolveFromDependencyContainerFields;
-use DmitryBubyakin\NovaMedialibraryField\Integrations\NovaFlexibleContent\ResolveFromFlexibleLayoutFields;
+use Aqjw\MedialibraryField\Fields\Medialibrary;
+use Aqjw\MedialibraryField\Integrations\NovaDependencyContainer\ResolveFromDependencyContainerFields;
+use Aqjw\MedialibraryField\Integrations\NovaFlexibleContent\ResolveFromFlexibleLayoutFields;
 use Exception;
 use Laravel\Nova\Http\Requests\NovaRequest;
 use Laravel\Nova\Resource;

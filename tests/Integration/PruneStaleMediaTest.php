@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Integration;
+namespace Aqjw\MedialibraryField\Tests\Integration;
 
-use DmitryBubyakin\NovaMedialibraryField\PruneStaleMedia;
-use DmitryBubyakin\NovaMedialibraryField\Tests\TestCase;
-use DmitryBubyakin\NovaMedialibraryField\TransientModel;
+use Aqjw\MedialibraryField\PruneStaleMedia;
+use Aqjw\MedialibraryField\Tests\TestCase;
+use Aqjw\MedialibraryField\TransientModel;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class PruneStaleMediaTest extends TestCase

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Tests\Integration;
+namespace Aqjw\MedialibraryField\Tests\Integration;
 
-use DmitryBubyakin\NovaMedialibraryField\Tests\Fixtures\TestPost;
-use DmitryBubyakin\NovaMedialibraryField\Tests\TestCase;
+use Aqjw\MedialibraryField\Tests\Fixtures\TestPost;
+use Aqjw\MedialibraryField\Tests\TestCase;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class CropControllerTest extends TestCase
@@ -41,7 +41,7 @@ class CropControllerTest extends TestCase
         ];
 
         $this
-            ->postJson('nova-vendor/dmitrybubyakin/nova-medialibrary-field/1/crop', $data)
+            ->postJson('nova-vendor/aqjw/medialibrary-field/1/crop', $data)
             ->assertOk();
 
         $this->assertSame([

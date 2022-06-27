@@ -4,7 +4,7 @@ export class UploadingMedia {
   constructor(props) {
     for (let key of ['id', 'size', 'fileName', 'mimeType', 'extension']) {
       if (props[key] === undefined) {
-        throw new Error(`[nova-medialibrary-field]: property ${key} is required`)
+        throw new Error(`[medialibrary-field]: property ${key} is required`)
       }
 
       this[key] = props[key]
@@ -30,7 +30,7 @@ export class UploadingMedia {
 
   remove() {
     if (typeof this.removeHandler !== 'function') {
-      throw new Error('[nova-medialibrary-field]: onRemove is not called')
+      throw new Error('[medialibrary-field]: onRemove is not called')
     }
 
     this.removeHandler(this)

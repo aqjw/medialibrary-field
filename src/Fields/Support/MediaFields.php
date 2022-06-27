@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Fields\Support;
+namespace Aqjw\MedialibraryField\Fields\Support;
 
-use DmitryBubyakin\NovaMedialibraryField\Fields\GeneratedConversions;
+use Aqjw\MedialibraryField\Fields\GeneratedConversions;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
 use Laravel\Nova\Fields\Text;

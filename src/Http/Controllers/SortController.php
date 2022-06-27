@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Http\Controllers;
+namespace Aqjw\MedialibraryField\Http\Controllers;
 
 use Illuminate\Http\Request;
 

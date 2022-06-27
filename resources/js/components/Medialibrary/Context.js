@@ -40,11 +40,11 @@ export const Provider = {
   created() {
     this.refresh()
 
-    Nova.$on(`nova-medialibrary-field:refresh:${this.field.attribute}`, this.refresh)
+    Nova.$on(`medialibrary-field:refresh:${this.field.attribute}`, this.refresh)
   },
 
   beforeDestroy() {
-    Nova.$off(`nova-medialibrary-field:refresh:${this.field.attribute}`, this.refresh)
+    Nova.$off(`medialibrary-field:refresh:${this.field.attribute}`, this.refresh)
   },
 
   methods: {
@@ -65,7 +65,7 @@ export const Provider = {
 
       return this.withLoading(
         Nova.request()
-          .get(`/nova-vendor/dmitrybubyakin/nova-medialibrary-field/${resourceName}/${resourceId}/media/${attribute}`, {
+          .get(`/nova-vendor/aqjw/medialibrary-field/${resourceName}/${resourceId}/media/${attribute}`, {
             params,
           })
           .then((response) => response.data.map(this.wrap))

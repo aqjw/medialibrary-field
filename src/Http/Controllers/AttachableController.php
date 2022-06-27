@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace DmitryBubyakin\NovaMedialibraryField\Http\Controllers;
+namespace Aqjw\MedialibraryField\Http\Controllers;
 
-use function DmitryBubyakin\NovaMedialibraryField\call_or_default;
-use DmitryBubyakin\NovaMedialibraryField\Fields\Support\AttachableMediaPresenter;
-use DmitryBubyakin\NovaMedialibraryField\Http\Requests\MedialibraryRequest;
-use DmitryBubyakin\NovaMedialibraryField\TransientModel;
+use function Aqjw\MedialibraryField\call_or_default;
+use Aqjw\MedialibraryField\Fields\Support\AttachableMediaPresenter;
+use Aqjw\MedialibraryField\Http\Requests\MedialibraryRequest;
+use Aqjw\MedialibraryField\TransientModel;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\JsonResponse;
 

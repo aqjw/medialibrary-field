@@ -1,11 +1,11 @@
 # Medialibrary Field for Laravel Nova
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/dmitrybubyakin/nova-medialibrary-field.svg?style=flat-square)](https://github.com/dmitrybubyakin/nova-medialibrary-field/releases)
-[![Total Downloads](https://img.shields.io/packagist/dt/dmitrybubyakin/nova-medialibrary-field.svg?style=flat-square)](https://packagist.org/packages/dmitrybubyakin/nova-medialibrary-field)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/aqjw/medialibrary-field.svg?style=flat-square)](https://github.com/aqjw/medialibrary-field/releases)
+[![Total Downloads](https://img.shields.io/packagist/dt/aqjw/medialibrary-field.svg?style=flat-square)](https://packagist.org/packages/aqjw/medialibrary-field)
 
 Laravel Nova field for managing the Spatie media library.
 
-This is the documentation for v2 and v3. For v1 follow this [link](https://github.com/dmitrybubyakin/nova-medialibrary-field/tree/1.2.2)
+This is the documentation for v2 and v3. For v1 follow this [link](https://github.com/aqjw/medialibrary-field/tree/1.2.2)
 
 Features:
  - add media on update/create views
@@ -49,21 +49,21 @@ Features:
 
 ## Screenshots
 
-![index view](https://raw.githubusercontent.com/dmitrybubyakin/nova-medialibrary-field/master/docs/index.png)
-![create view](https://raw.githubusercontent.com/dmitrybubyakin/nova-medialibrary-field/master/docs/create.png)
-![details view](https://raw.githubusercontent.com/dmitrybubyakin/nova-medialibrary-field/master/docs/details.png)
-![update view](https://raw.githubusercontent.com/dmitrybubyakin/nova-medialibrary-field/master/docs/update.png)
-![media actions](https://raw.githubusercontent.com/dmitrybubyakin/nova-medialibrary-field/master/docs/actions.png)
-![media crop dialog](https://raw.githubusercontent.com/dmitrybubyakin/nova-medialibrary-field/master/docs/crop-dialog.png)
-![media details dialog](https://raw.githubusercontent.com/dmitrybubyakin/nova-medialibrary-field/master/docs/media-details-dialog.png)
-![existing media dialog](https://raw.githubusercontent.com/dmitrybubyakin/nova-medialibrary-field/master/docs/existing-media-dialog.png)
+![index view](https://raw.githubusercontent.com/aqjw/medialibrary-field/master/docs/index.png)
+![create view](https://raw.githubusercontent.com/aqjw/medialibrary-field/master/docs/create.png)
+![details view](https://raw.githubusercontent.com/aqjw/medialibrary-field/master/docs/details.png)
+![update view](https://raw.githubusercontent.com/aqjw/medialibrary-field/master/docs/update.png)
+![media actions](https://raw.githubusercontent.com/aqjw/medialibrary-field/master/docs/actions.png)
+![media crop dialog](https://raw.githubusercontent.com/aqjw/medialibrary-field/master/docs/crop-dialog.png)
+![media details dialog](https://raw.githubusercontent.com/aqjw/medialibrary-field/master/docs/media-details-dialog.png)
+![existing media dialog](https://raw.githubusercontent.com/aqjw/medialibrary-field/master/docs/existing-media-dialog.png)
 
 ## Installation
 
 This package can be installed via command:
 
 ```bash
-composer require dmitrybubyakin/nova-medialibrary-field
+composer require aqjw/medialibrary-field
 ```
 
 ## Usage
