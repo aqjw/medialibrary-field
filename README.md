@@ -1,4 +1,4 @@
-# Medialibrary Field for Laravel Nova
+# Nova Medialibrary
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/aqjw/medialibrary-field.svg?style=flat-square)](https://github.com/aqjw/medialibrary-field/releases)
 [![Total Downloads](https://img.shields.io/packagist/dt/aqjw/medialibrary-field.svg?style=flat-square)](https://packagist.org/packages/aqjw/medialibrary-field)
@@ -63,7 +63,7 @@ Features:
 This package can be installed via command:
 
 ```bash
-composer require aqjw/medialibrary-field
+composer require aqjw/nova-medialibrary-field
 ```
 
 ## Usage

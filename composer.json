@@ -1,5 +1,5 @@
 {
-    "name": "aqjw/medialibrary-field",
+    "name": "aqjw/nova-medialibrary-field",
     "description": "Laravel Nova field for managing the Spatie media library.",
     "keywords": [
         "laravel",
