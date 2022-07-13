@@ -3,6 +3,7 @@
 namespace Aqjw\MedialibraryField;
 
 use Aqjw\MedialibraryField\Fields\Medialibrary;
+use Aqjw\MedialibraryField\Integrations\Nova4DependencyContainer\ResolveFromNova4DependencyContainerFields;
 use Aqjw\MedialibraryField\Integrations\NovaDependencyContainer\ResolveFromDependencyContainerFields;
 use Aqjw\MedialibraryField\Integrations\NovaFlexibleContent\ResolveFromFlexibleLayoutFields;
 use Exception;
@@ -14,6 +15,7 @@ class MedialibraryFieldResolver
     public static $resolvers = [
         ResolveFromFlexibleLayoutFields::class,
         ResolveFromDependencyContainerFields::class,
+        ResolveFromNova4DependencyContainerFields::class,
     ];
 
     private $request;
