@@ -1,7 +1,7 @@
 # Nova Medialibrary
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/aqjw/medialibrary-field.svg?style=flat-square)](https://github.com/aqjw/medialibrary-field/releases)
-[![Total Downloads](https://img.shields.io/packagist/dt/aqjw/medialibrary-field.svg?style=flat-square)](https://packagist.org/packages/aqjw/medialibrary-field)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/aqjw/nova-medialibrary-field.svg?style=flat-square)](https://github.com/aqjw/medialibrary-field/releases)
+[![Total Downloads](https://img.shields.io/packagist/dt/aqjw/nova-medialibrary-field.svg?style=flat-square)](https://packagist.org/packages/aqjw/nova-medialibrary-field)
 
 Laravel Nova field for managing the Spatie media library.
 
