@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Aqjw\MedialibraryField;
 
-use Aqjw\MedialibraryField\Resources\Media;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
@@ -12,32 +11,33 @@ use Laravel\Nova\Nova;
 
 class FieldServiceProvider extends ServiceProvider
 {
-    public function boot(): void
+    public function boot() : void
     {
         $this->publishes([
-            __DIR__.'/../resources/lang/' => resource_path('lang/vendor/medialibrary-field'),
+            __DIR__ . '/../resources/lang/' => resource_path('lang/vendor/medialibrary-field'),
         ]);
 
         $this->loadJSONTranslationsFrom(resource_path('lang/vendor/medialibrary-field'));
 
-        Nova::serving(function (ServingNova $event): void {
-            Nova::script('medialibrary-field', __DIR__.'/../dist/js/field.js');
-            Nova::style('medialibrary-field', __DIR__.'/../dist/css/field.css');
+        Nova::serving(function (ServingNova $event) : void {
+            Nova::script('medialibrary-field', __DIR__ . '/../dist/js/field.js');
+            Nova::style('medialibrary-field', __DIR__ . '/../dist/css/field.css');
 
-            Media::$model = config('media-library.media_model');
+            $media_resource = config('media-library.resource', \Aqjw\MedialibraryField\Resources\Media::class);
+            $media_resource::$model = config('media-library.media_model');
 
             Nova::resources([
-                Media::class,
+                $media_resource,
             ]);
         });
 
-        $this->app->booted(function (): void {
+        $this->app->booted(function () : void {
             $this->routes();
             $this->translations();
         });
     }
 
-    public function routes(): void
+    public function routes() : void
     {
         if ($this->app->routesAreCached()) {
             return;
@@ -45,7 +45,7 @@ class FieldServiceProvider extends ServiceProvider
 
         Route::middleware(['nova'])
             ->prefix('nova-vendor/aqjw/medialibrary-field')
-            ->group(function (): void {
+            ->group(function () : void {
                 Route::post('sort', Http\Controllers\SortController::class);
                 Route::post('{media}/crop', Http\Controllers\CropController::class);
                 Route::post('{media}/regenerate', Http\Controllers\RegenerateController::class);
@@ -55,15 +55,15 @@ class FieldServiceProvider extends ServiceProvider
             });
     }
 
-    public function translations(): void
+    public function translations() : void
     {
         $locale = $this->app->getLocale();
 
-        Nova::translations(__DIR__.'/../resources/lang/'.$locale.'.json');
-        Nova::translations(resource_path('lang/vendor/medialibrary-field/'.$locale.'.json'));
+        Nova::translations(__DIR__ . '/../resources/lang/' . $locale . '.json');
+        Nova::translations(resource_path('lang/vendor/medialibrary-field/' . $locale . '.json'));
     }
 
-    public function register(): void
+    public function register() : void
     {
         //
     }
